@@ -1,0 +1,29 @@
+programa {
+  funcao inicio() {
+    //3) Criar um programa para calcular a densidade demográfica (habitantes por quilômetro quadrado) de uma região. Sendo, densidade igual a população (total de habitantes) dividida pela área (quilômetros quadrados).
+    //Mostrar mensagens para densidade alta (maior ou igual a 100) e densidade baixa (menor que 100).
+    //(DESAFIO: Incluir também densidade média entre 50 e 100).
+
+    inteiro quantidadeDehabitantes
+    real densidadeDemograficaDaArea
+    real kmQuadradoDaArea
+    inteiro limiteSuperior = 100
+    inteiro limiteInferior = 50
+
+    escreva("Qual a quantidade de habitantes habitando atualmente?\nResposta: ")
+    leia(quantidadeDehabitantes)
+
+    escreva("Quantos quilometros quadrados sua região possui?\nResposta: ")
+    leia(kmQuadradoDaArea)
+
+    densidadeDemograficaDaArea = quantidadeDehabitantes / kmQuadradoDaArea
+
+    se(densidadeDemograficaDaArea >= limiteSuperior){
+      escreva("Densidade considerada alta!\nDensidade atual: ",densidadeDemograficaDaArea)
+    } senao se(densidadeDemograficaDaArea >= limiteInferior e densidadeDemograficaDaArea < limiteSuperior){
+      escreva("Densidade moderada!\nDensidade Atual: ",densidadeDemograficaDaArea)
+    } senao{
+      escreva("Densidade baixa!\nDensidade Atual: ", densidadeDemograficaDaArea)
+    }
+  }
+}
