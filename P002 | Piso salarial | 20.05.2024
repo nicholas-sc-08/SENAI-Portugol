@@ -1,0 +1,29 @@
+programa {
+  funcao inicio() {
+    //2) Faça um programa para ler o salário anual de um funcionário e o piso salarial mensal da sua categoria.
+//Mostrar o salário mensal do funcionário e dizer se ele recebe de acordo com o piso (maior ou igual o piso da categoria) ou se recebe abaixo do piso.
+//(DESAFIO: Incluir uma mensagem também para caso ganhe exatamente igual ao piso).
+
+   inteiro quantidadeDeMesesNoAno = 12
+   real pisoSalarialDeSuaCategoria
+   real salarioAnual
+   real salarioMensal
+
+   escreva("Qual o salário do piso em que você atua?\nResposta: ")
+   leia(pisoSalarialDeSuaCategoria)
+
+   escreva("Qual o seu salário anual?\nResposta: ")
+   leia(salarioAnual)
+
+   salarioMensal = salarioAnual / quantidadeDeMesesNoAno
+
+  se(salarioMensal > pisoSalarialDeSuaCategoria){
+    escreva("Você recebe um salário acima do seu piso! Favor corrigir este problema!\n\nSalário Mensal que você recebe: R$",salarioMensal)
+  } senao se(salarioMensal == pisoSalarialDeSuaCategoria){
+    escreva("Você recebe um salário equivalente ao seu piso!\n\nSalário Mensal que você recebe: R$", salarioMensal)
+  } senao {
+    escreva("Você recebe um salário abaixo do seu piso! Favor corrigir este problema!\n\nSalário Mensal que você recebe: R$",salarioMensal)
+  }
+
+  }
+}
