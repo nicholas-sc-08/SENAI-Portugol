@@ -28,7 +28,7 @@ escreva("Espécie vulnerável!")
   escreva("Espécie não ameçada de extinção.")
 } senao {
 
-  escreva("Espécie em extinção!")
+  escreva("Espécie ameaçada de extinção!")
 }
   }
 }
