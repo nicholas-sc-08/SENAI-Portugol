@@ -1,0 +1,34 @@
+programa {
+  funcao inicio() {
+//) Elaborar um programa que alerte sobre os riscos de animais em extinção.
+//O usuário deve digitar o nome da espécie e a sua população (total de indivíduos).
+//Populações entre 200 e 500 indivíduos, são classificadas como "Espécie criticamente em perigo", populações entre 500 e 1000 indivíduos,
+// são classificadas como "Espécie em perigo" e populações entre 1000 e 5000 indivíduos, são classificadas como "Espécie vulnerável!" 
+
+cadeia nomeDaEspecie
+inteiro totalDaPopulacaoDaEspecie
+inteiro limiteCriticoInferior = 200
+inteiro limiteCriticoSuperiorElimiteEmPerigoInferior = 500
+inteiro limitEmPerigoSuperiorElimiteInferiorDeEspecieVulneravel = 1000
+inteiro limiteSuperiorDeEspecieVulneravel = 5000
+
+escreva("Qual o nome da espécie a ser comparada?\nResposta: ")
+leia(nomeDaEspecie)
+
+escreva("Qual o total da população?")
+leia(totalDaPopulacaoDaEspecie)
+
+se(totalDaPopulacaoDaEspecie >= limiteCriticoInferior e totalDaPopulacaoDaEspecie <= limiteCriticoSuperiorElimiteEmPerigoInferior ){
+ escreva("Espécie criticamente em perigo!")
+} senao se(totalDaPopulacaoDaEspecie >= limiteCriticoSuperiorElimiteEmPerigoInferior e totalDaPopulacaoDaEspecie <= limitEmPerigoSuperiorElimiteInferiorDeEspecieVulneravel){
+ escreva("Espécie em perigo!")
+} senao se(totalDaPopulacaoDaEspecie >= limitEmPerigoSuperiorElimiteInferiorDeEspecieVulneravel e totalDaPopulacaoDaEspecie <= limiteSuperiorDeEspecieVulneravel){
+escreva("Espécie vulnerável!")
+} senao se(totalDaPopulacaoDaEspecie > limiteSuperiorDeEspecieVulneravel) {
+  escreva("Espécie não ameçada de extinção.")
+} senao {
+
+  escreva("Espécie em extinção!")
+}
+  }
+}
