@@ -23,7 +23,9 @@ programa {
     escreva("Você possui comorbidade?\nResposta: ")
     leia(possuiComorbidade)
 
-    se(possuiComorbidade == "S" ou possuiComorbidade == "Sim"){
+    se(idadeDaPessoa < 0){
+      escreva("Digitação inválida!")
+    } senao se(possuiComorbidade == "S" ou possuiComorbidade == "Sim"){
 
       escreva("Nome: ",nomeDePessoa,"\nIdade: ",idadeDaPessoa, "\nPode se vacinar?\nResposta: Sim!")
     } senao se(possuiComorbidade == "s" ou possuiComorbidade == "sim"){
