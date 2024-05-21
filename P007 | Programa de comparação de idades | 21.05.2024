@@ -1,0 +1,59 @@
+programa {
+  funcao inicio() {
+//4) Desenvolva um programa no qual o usuário deve digitar o nome e a idade de 5 pessoas.
+//Ao final mostrar a média de idade delas e a maior idade dentre essas pessoas.
+//(DESAFIO: Mostrar também o nome da pessoa com a maior idade).
+cadeia nomeDaPessoaUm
+cadeia nomeDaPessoaDois
+cadeia nomeDaPessoaTres
+cadeia nomeDaPessoaQuatro
+cadeia nomeDaPessoaCinco
+inteiro idadeDaPessoaUm
+inteiro idadeDaPessoaDois
+inteiro idadeDaPessoaTres
+inteiro idadeDaPessoaQuatro
+inteiro idadeDaPessoaCinco
+real somaDasIdades
+real mediaDasIdades
+real quantidadeDeIdadesInserida = 5
+
+  escreva("Qual o nome da primeira pessoa?\nResposta: ")
+  leia(nomeDaPessoaUm)
+  escreva("Qual a idade do(a) ",nomeDaPessoaUm,"?\nResposta: ")
+  leia(idadeDaPessoaUm)
+  escreva("Qual o nome da segunda pessoa?\nResposta: ")
+  leia(nomeDaPessoaDois)
+  escreva("Qual a idade do(a) ",nomeDaPessoaDois,"?\nResposta: ")
+  leia(idadeDaPessoaDois)
+  escreva("Qual o nome da terceira pessoa?\nResposta: ")
+  leia(nomeDaPessoaTres)
+  escreva("Qual a idade do(a) ",nomeDaPessoaTres,"?\nResposta: ")
+  leia(idadeDaPessoaTres)
+  escreva("Qual o nome da quarta pessoa?\nResposta: ")
+  leia(nomeDaPessoaQuatro)
+  escreva("Qual a idade do(a) ",nomeDaPessoaQuatro,"?\nRespota: ")
+  leia(idadeDaPessoaQuatro)
+  escreva("Qual o nome da quinta pessoa?\nResposta: ")
+  leia(nomeDaPessoaCinco)
+  escreva("Qual a idade do(a) ",nomeDaPessoaCinco,"?\nResposta: ")
+  leia(idadeDaPessoaCinco)
+  
+  se(idadeDaPessoaUm > idadeDaPessoaDois e idadeDaPessoaUm > idadeDaPessoaTres e idadeDaPessoaUm > idadeDaPessoaQuatro e idadeDaPessoaUm > idadeDaPessoaCinco){
+    escreva("A pessoa mais velha do grupo comparado é o(a): ",nomeDaPessoaUm,".")
+  } senao se(idadeDaPessoaDois > idadeDaPessoaUm e idadeDaPessoaDois > idadeDaPessoaTres e idadeDaPessoaDois > idadeDaPessoaQuatro e idadeDaPessoaDois > idadeDaPessoaCinco){
+  escreva("A pessoa mais velha do grupo comparado é o(a): ",nomeDaPessoaDois,".")
+  } senao se(idadeDaPessoaTres > idadeDaPessoaUm e idadeDaPessoaTres > idadeDaPessoaDois e idadeDaPessoaTres > idadeDaPessoaQuatro e idadeDaPessoaTres > idadeDaPessoaCinco){
+    escreva("A pessoa mais velha do grupo comparado é o(a): ",nomeDaPessoaTres,".")
+  } senao se(idadeDaPessoaQuatro > idadeDaPessoaUm e idadeDaPessoaQuatro > idadeDaPessoaDois e idadeDaPessoaQuatro > idadeDaPessoaTres e idadeDaPessoaQuatro > idadeDaPessoaCinco){
+    escreva("A pessoa mais velha do grupo comparado é o(a): ",nomeDaPessoaQuatro,".")
+  } senao {
+    escreva("A pessoa mais velha do grupo comparado é o(a): ",nomeDaPessoaCinco,".")
+  }
+
+    somaDasIdades = idadeDaPessoaUm + idadeDaPessoaDois + idadeDaPessoaTres + idadeDaPessoaQuatro + idadeDaPessoaCinco
+
+   mediaDasIdades = somaDasIdades / quantidadeDeIdadesInserida
+
+   escreva("\nA média das idades é de: ",mediaDasIdades,".")
+  } 
+}
