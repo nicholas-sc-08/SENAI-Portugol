@@ -1,0 +1,50 @@
+programa {
+  funcao inicio() {
+  podeSeVacinar()
+  }
+  funcao podeSeVacinar(){
+    // 2) Criar um programa que pergunte o nome e a idade da pessoa, e se tem comorbidade (S ou N).
+    //Mostrar mensagem "Pode se vacinar!" caso a idade seja maior ou igual a 60 ou tenha comorbidade. Caso contrário, mostrar mensagem "Não pode se vacinar!". 
+    cadeia resposta
+    cadeia nomeDePessoa
+    inteiro idadeDaPessoa
+    cadeia possuiComorbidade
+    inteiro limitedeIdadeQuePodeVacinar = 150
+    inteiro minimoDeIdadeQuePodeVacinar = 60
+    inteiro limiteDeIdadeQueNaoPodeVacinar = 59
+    inteiro minimoDeIdadeQueNaoPodeVacinar = 0
+
+    escreva("\nQual seu nome?\nResposta: ")
+    leia(nomeDePessoa)
+
+    escreva("\nQual sua idade?\nResposta: ")
+    leia(idadeDaPessoa)
+
+    escreva("Você possui comorbidade?\nResposta: ")
+    leia(possuiComorbidade)
+
+    se(possuiComorbidade == "S" ou possuiComorbidade == "Sim"){
+
+      escreva("Nome: ",nomeDePessoa,"\nIdade: ",idadeDaPessoa, "\nPode se vacinar?\nResposta: Sim!")
+    } senao se(possuiComorbidade == "s" ou possuiComorbidade == "sim"){
+
+      escreva("Nome: ",nomeDePessoa,"\nIdade: ",idadeDaPessoa, "\nPode se vacinar?\nResposta: Sim!")
+
+    }senao se(idadeDaPessoa >= minimoDeIdadeQuePodeVacinar e idadeDaPessoa <= limitedeIdadeQuePodeVacinar){
+
+      escreva("Nome: ",nomeDePessoa,"\nIdade: ",idadeDaPessoa, "\nPode se vacinar?\nResposta: Sim!")
+    }senao se(possuiComorbidade == "N" ou possuiComorbidade == "nao"){
+
+      escreva("Nome: ",nomeDePessoa,"\nIdade: ",idadeDaPessoa, "\nPode se vacinar?\nResposta: Não!")
+    } senao se(possuiComorbidade == "não" ou possuiComorbidade == "Não"){
+escreva("Nome: ",nomeDePessoa,"\nIdade: ",idadeDaPessoa, "\nPode se vacinar?\nResposta: Não!")
+
+    }senao se(idadeDaPessoa >= minimoDeIdadeQuePodeVacinar e  idadeDaPessoa < minimoDeIdadeQueNaoPodeVacinar){
+    escreva("Nome: ",nomeDePessoa,"\nIdade: ",idadeDaPessoa, "\nPode se vacinar?\nResposta: Não!")
+
+    }senao{
+      escreva("Digitação inválida!")
+      inicio()
+    }
+  }
+}
