@@ -1,0 +1,33 @@
+programa {
+  funcao inicio() {
+// 3) Elabore um programa que leia a idade e o tempo de serviço de um trabalhador e escreva se ele pode ou nao se aposentar. As condições para aposentadoria são:
+
+// a) Ter pelo menos 65 anos
+// b) Ter trabalhado pelo menos 30 anos
+// c) Ter pelo menos 60 anos e ter trabalhado pelo menos 25 anos
+cadeia nomeDoTrabalhor
+inteiro idadeDoTrabalhador
+inteiro quantidadeDeAnosQueTrabalhou
+inteiro idadeMinimiaParaAposentar = 65
+inteiro quantidadeMinimaQueDeveTerTrabalhado = 30
+inteiro segundaOpcaoDeIdadeMinimaQueDeveTerTrabalhado = 60
+inteiro segundaOpcaoDeQuantidadeMinimaQueDeveTerTrabalhado = 25 
+
+escreva("Qual o nome do trabalhador(a)?\nResposta: ")
+leia(nomeDoTrabalhor)
+escreva("Qual a idade do trabalhador(a)?\nResposta: ")
+leia(idadeDoTrabalhador)
+escreva("Quantos anos o trabalhador(a) trabalhou para a empresa?\nResposta: ")
+leia(quantidadeDeAnosQueTrabalhou)
+
+se (idadeDoTrabalhador >= 65){
+  escreva("Já pode se aposentar, ",nomeDoTrabalhor,".")
+} senao se(quantidadeDeAnosQueTrabalhou >= quantidadeMinimaQueDeveTerTrabalhado){
+  escreva("Já pode se aposentar, ",nomeDoTrabalhor,".")
+} senao se(idadeDoTrabalhador >= segundaOpcaoDeIdadeMinimaQueDeveTerTrabalhado e quantidadeDeAnosQueTrabalhou >= segundaOpcaoDeQuantidadeMinimaQueDeveTerTrabalhado){
+  escreva("Já pode se aposentar, ",nomeDoTrabalhor,".")
+} senao {
+  escreva("Não pode se aposentar ",nomeDoTrabalhor,"!")
+}
+  }
+}
