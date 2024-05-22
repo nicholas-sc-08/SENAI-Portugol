@@ -1,0 +1,67 @@
+programa {
+  funcao inicio() {
+  numeros()
+  }
+  funcao numeros(){
+    // 4) Faça um programa do qual o usuário digite quatro números e ao final mostre o maior número, o menor número, e a soma dos outros dois números (que não são o maior nem o menor). 
+    // (DESAFIO: Caso existam números repetidos digitados, após o usuário digitar os quatro números, não mostrar maior, menor nem soma, mas uma mensagem "Você digitou números repetidos".)
+   real primeiroNumero
+   real segundoNumero
+   real terceiroNumero
+   real quartoNumero
+   real maiorNumero
+   real menorNumero
+   real somaDosNumeros 
+   real subtracaoDosNumeros
+
+    escreva("\nDigite o primeiro número (Não pode haver números repetidos).\nResposta: ")
+    leia(primeiroNumero)
+    escreva("Digite o segundo número (Não pode haver números repetidos).\nResposta: ")
+    leia(segundoNumero)
+    escreva("Digite o terceiro número (Não pode haver números repetidos).\nResposta: ")
+    leia(terceiroNumero)
+    escreva("Digite o quarto número (Não pode haver números repetidos).\nResposta: ")
+    leia(quartoNumero)
+  maiorNumero = primeiroNumero
+  menorNumero = primeiroNumero
+   se(primeiroNumero == segundoNumero ou primeiroNumero == terceiroNumero ou primeiroNumero == quartoNumero){
+    escreva("Opção inválida, números repitidos")
+    inicio()
+   } senao  se(segundoNumero == primeiroNumero ou segundoNumero == terceiroNumero ou primeiroNumero == quartoNumero){
+    escreva("Opção inválida, números repitidos")
+    inicio()
+   } senao  se(terceiroNumero == segundoNumero ou terceiroNumero == primeiroNumero ou terceiroNumero == quartoNumero){
+    escreva("Opção inválida, números repitidos")
+    inicio()
+   } senao {
+    escreva("Opção inválida, números repitidos")
+    inicio()
+   }
+
+  se(segundoNumero > maiorNumero){
+    maiorNumero = segundoNumero
+  } senao se(terceiroNumero > maiorNumero){
+    maiorNumero = terceiroNumero
+  } senao {
+    maiorNumero = quartoNumero
+  }
+
+
+   se(segundoNumero < menorNumero){
+    menorNumero = segundoNumero
+   } senao se(terceiroNumero < menorNumero){
+    menorNumero = terceiroNumero
+   } senao {
+    menorNumero = quartoNumero
+   }
+
+
+  somaDosNumeros = primeiroNumero + segundoNumero + terceiroNumero + quartoNumero
+  subtracaoDosNumeros = somaDosNumeros - menorNumero - maiorNumero
+
+  escreva("O maior número é: ",menorNumero,"\nO menor número é: ",maiorNumero,"\nA soma dos números do meio é de: ",subtracaoDosNumeros)
+
+  
+
+  }
+}
