@@ -1,0 +1,24 @@
+programa {
+  funcao inicio() {
+   verificacaoDaCorDoSemaforo()
+  }
+    //1) Faça um programa no qual o usuário digite a cor que está no semáforo (verde, amarelo, vermelho).
+    //Caso seja digitado verde, mostre na tela "Pode seguir!", se for digitado amarelo, mostre "Alerta, pare!" e se for digitado vermelho, mostre "Pare imediatamente!".
+
+   funcao verificacaoDaCorDoSemaforo(){ 
+    cadeia corDoSemaforo
+    escreva("\nQual a cor que está no semáforo?\nResposta: ")
+    leia(corDoSemaforo)
+
+    se(corDoSemaforo == "verde" ou corDoSemaforo == "Verde"){
+      escreva("Pode seguir!")
+    } senao se(corDoSemaforo == "amarelo" ou corDoSemaforo == "Amarelo"){
+      escreva("Alerta, pare!")
+    } senao se(corDoSemaforo == "vermelho" ou corDoSemaforo == "Vermelho"){
+      escreva("Pare imediatamente!")
+    } senao {
+      escreva("Opção invalida, por favor digitar entre (verde, amarelo ou vermelho).")
+      inicio()
+    }
+  }
+}
