@@ -1,0 +1,30 @@
+programa {
+  funcao inicio() {
+    // 6) Uma feira está realizando promoção na compra de ovos. Os ovos custam 40 centavos cada, se forem comprados até 12 (uma dúzia),
+    // 30 centavos cada, se forem comprados de 13 a 24 (até duas dúzias) e 25 centavos cada, caso sejam comprados mais que duas dúzias.
+    // Faça um programa que leia o número de ovos comprados, calcule e mostre na tela o valor total da compra.
+  inteiro quantidadeDeOvosQueDesejouPegar
+  real precoDeComparacaoPorOvo
+  real precoDeCadaOvo = 0.40
+  real precoDeCadaOvoPorDuzia = 0.30
+  real precoDeCadaOvoComMaisDeDuasDuzias = 0.25
+  inteiro umaDuzia = 12
+  inteiro duasDuzias = 24
+  real totalDaCompra
+  escreva("Quantos ovos você deseja comprar?\nResposta: ")
+  leia(quantidadeDeOvosQueDesejouPegar)
+
+precoDeComparacaoPorOvo = quantidadeDeOvosQueDesejouPegar
+  se(precoDeComparacaoPorOvo < umaDuzia){
+  totalDaCompra = precoDeComparacaoPorOvo * precoDeCadaOvo
+  escreva("Total da sua compra é de: R$",totalDaCompra)
+  } senao se(precoDeComparacaoPorOvo > umaDuzia e precoDeComparacaoPorOvo <= duasDuzias ){
+    totalDaCompra = precoDeComparacaoPorOvo * precoDeCadaOvoPorDuzia
+     escreva("Total da sua compra é de: R$",totalDaCompra)
+  } senao {
+    totalDaCompra = precoDeComparacaoPorOvo * precoDeCadaOvoComMaisDeDuasDuzias
+     escreva("Total da sua compra é de: R$",totalDaCompra)
+  }
+
+  }
+}
