@@ -1,0 +1,32 @@
+programa {
+  funcao inicio() {
+    motivoDeSaidaDoFuncionario()
+  }
+  funcao motivoDeSaidaDoFuncionario() {
+  //   5) Criar um programa no qual o usuário digite o motivo da sua saída em uma empresa e o valor do seus FGTS.
+  //   Para motivo "Justa causa" o valor a receber é o valor do FGTS somado a uma multa de R$4.000,00. Para motivo "Sem justa causa" o valor a receber é o valor do FGTS com desconto de 15%.
+  //   Ao final mostrar o valor a receber.
+
+  real valorDaMulta = 4000
+  cadeia condicao
+  real valorDoFgts = 0.08
+  real salarioDoFuncionario
+  real desconto = 0.15
+  real valorAReceber
+  escreva("Qual o motivo da sua saída da empresa? (Justa causa ou Sem justa causa).\nResposta: ")
+  leia(condicao)
+  escreva("Qual o salário do funcionário?\nResposta: ")
+  leia(salarioDoFuncionario)
+
+  se(condicao == "Justa causa"){
+   valorAReceber = salarioDoFuncionario * valorDoFgts + valorDaMulta
+   escreva("O valor do salário que deve ser pago ao funcionário por justa causa é de: R$",valorAReceber) 
+  } senao se(condicao == "Sem justa causa"){
+    valorAReceber = ( salarioDoFuncionario * valorDoFgts ) * desconto
+    escreva("O valor do salário que deve ser pago ao funcionário por justa causa é de: R$",valorAReceber) 
+  } senao {
+    escreva("Digte se é por 'Justa causa' ou 'Sem justa causa'")
+    inicio()
+  }
+   }
+}
