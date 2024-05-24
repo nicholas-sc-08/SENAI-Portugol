@@ -9,9 +9,8 @@ programa {
 
   real valorDaMulta = 4000
   cadeia condicao
-  real valorDoFgts = 0.08
   real salarioDoFuncionario
-  real desconto = 0.15
+  real desconto = 0.85
   real valorAReceber
   escreva("Qual o motivo da sua saída da empresa? (Justa causa ou Sem justa causa).\nResposta: ")
   leia(condicao)
@@ -19,10 +18,10 @@ programa {
   leia(salarioDoFuncionario)
 
   se(condicao == "Justa causa"){
-   valorAReceber = salarioDoFuncionario * valorDoFgts + valorDaMulta
+   valorAReceber = salarioDoFuncionario  + valorDaMulta
    escreva("O valor do salário que deve ser pago ao funcionário por justa causa é de: R$",valorAReceber) 
   } senao se(condicao == "Sem justa causa"){
-    valorAReceber = ( salarioDoFuncionario * valorDoFgts ) * desconto
+    valorAReceber =  salarioDoFuncionario  * desconto
     escreva("O valor do salário que deve ser pago ao funcionário por justa causa é de: R$",valorAReceber) 
   } senao {
     escreva("Digte se é por 'Justa causa' ou 'Sem justa causa'")
