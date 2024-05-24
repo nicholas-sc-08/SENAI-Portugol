@@ -1,0 +1,31 @@
+programa {
+  funcao inicio() {
+  comparacaoDosLadosDoTriangulo()
+  }
+  funcao comparacaoDosLadosDoTriangulo(){
+    // 1) Elabore um programa que leia três lados de um triângulo e mostre na tela se ele é equilátero, isósceles ou escaleno.
+    // Quando os três lados forem iguais trata-se de um triângulo equilátero,
+    // dois lados iguais é um triângulo isósceles e os três lados diferentes é um triângulo escaleno.
+
+    real ladoA
+    real ladoB
+    real ladoC
+escreva("\nDigite o primeiro número: ")
+leia(ladoA)
+escreva("Digite o segundo número: ")
+leia(ladoB)
+escreva("Digite o terceiro número: ")
+leia(ladoC)
+
+se(ladoA == ladoB e ladoA == ladoC){
+  escreva("É u triângulo equilátero!\nValores dos lados:\nLado A: ",ladoA,"\nLado B: ",ladoB,"\nLado C: ",ladoC)
+} senao se(ladoA == ladoC e ladoA != ladoB){
+  escreva("É um triângulo isóceles!\nValores dos lados:\nLado A: ",ladoA,"\nLado B: ",ladoB,"\nLado C: ",ladoC)
+} senao se(ladoA < ladoB e ladoB > ladoC){
+  escreva("É um triângulo escaleno!\nValores dos lados:\nLado A: ",ladoA,"\nLado B: ",ladoB,"\nLado C: ",ladoC)
+} senao {
+  escreva("\nNão é nenhuma das 3 opções! Entre equilatero, isóceles e escaleno.")
+  comparacaoDosLadosDoTriangulo()
+}
+  }
+}
