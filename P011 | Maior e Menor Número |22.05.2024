@@ -22,22 +22,12 @@ programa {
     leia(terceiroNumero)
     escreva("Digite o quarto número (Não pode haver números repetidos).\nResposta: ")
     leia(quartoNumero)
+
+  se(primeiroNumero != segundoNumero e primeiroNumero != terceiroNumero e primeiroNumero != quartoNumero){
+    se(segundoNumero != terceiroNumero e segundoNumero != quartoNumero){
+      se(terceiroNumero != quartoNumero){
   maiorNumero = primeiroNumero
   menorNumero = primeiroNumero
-   se(primeiroNumero == segundoNumero ou primeiroNumero == terceiroNumero ou primeiroNumero == quartoNumero){
-    escreva("Opção inválida, números repitidos")
-    inicio()
-   } senao  se(segundoNumero == primeiroNumero ou segundoNumero == terceiroNumero ou primeiroNumero == quartoNumero){
-    escreva("Opção inválida, números repitidos")
-    inicio()
-   } senao  se(terceiroNumero == segundoNumero ou terceiroNumero == primeiroNumero ou terceiroNumero == quartoNumero){
-    escreva("Opção inválida, números repitidos")
-    inicio()
-   } senao {
-    escreva("Opção inválida, números repitidos")
-    inicio()
-   }
-
   se(segundoNumero > maiorNumero){
     maiorNumero = segundoNumero
   } senao se(terceiroNumero > maiorNumero){
@@ -60,6 +50,13 @@ programa {
   subtracaoDosNumeros = somaDosNumeros - menorNumero - maiorNumero
 
   escreva("O maior número é: ",menorNumero,"\nO menor número é: ",maiorNumero,"\nA soma dos números do meio é de: ",subtracaoDosNumeros)
+
+      }
+    }
+  } senao {
+    escreva("Números repitidos!")
+    numeros()
+  }
 
   
 
