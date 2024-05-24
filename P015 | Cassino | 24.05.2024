@@ -1,0 +1,44 @@
+programa {
+  funcao inicio() {
+   quantasCerejasELaranjasForaoGanhas()
+  }
+  funcao quantasCerejasELaranjasForaoGanhas(){
+    // 2) Em uma máquina de cassino, ao jogar o jogador sempre ganha. Em cada 'partida' o jogador pode formar sequências de frutas que rendem valores em dinheiro.
+    // Criar um programa que pergunte ao jogador as três frutas sorteadas e mostre o valor ganho de acordo com a tabela a seguir.
+
+  //  CEREJA - CEREJA - CEREJA -> R$100
+  //  LARANJA - LARANJA - LARANJA -> R$80
+  //  CEREJA - LARANJA - CEREJA -> R$50
+  //  LARANJA - CEREJA - LARANJA -> R$25
+
+  cadeia frutaA
+  cadeia frutaB
+  cadeia frutaC
+  real valorDeTresCerejas = 100
+  real valorDeTresLaranjas = 80
+  real valorDeDuasCerejasEUmaLaranja = 50
+  real valorDeDuasLaranjasEUmaCereja = 25
+
+
+  escreva("Qual foi a primeira fruta sortida?\nResposta: ")
+  leia(frutaA)
+  escreva("Qual foi a segunda fruta sortida?\nResposta: ")
+  leia(frutaB)
+  escreva("Qual foi a terceira fruta sortida?\nResposta: ")
+  leia(frutaC)
+
+  se(frutaA == "CEREJA" ou frutaA == "cereja" e frutaA == frutaB e frutaB == frutaC){
+    escreva("Você ganhou 3 Cerejas!\n\nValor ganho: R$",valorDeTresCerejas)
+  } senao se(frutaA == "LARANJA" ou frutaA == "laranja" e frutaA == frutaB e frutaB == frutaC){
+    escreva("Você ganhou 3 Laranjas!\n\nValor ganho: R$",valorDeTresLaranjas)
+  } senao se(frutaA == "CEREJA" ou frutaA == "cereja" e frutaB == "LARANJA" ou frutaB == "laranja" e frutaA == frutaC){
+    escreva("Voce ganhou 2 Cerejas e 1 Laranja!\n\nValor ganho: R$",valorDeDuasCerejasEUmaLaranja)
+  } senao se(frutaA == "LARANJA" ou frutaA == "laranja" e frutaB == "CEREJA" ou frutaB == "cereja" e frutaA == frutaC){
+    escreva("Voce ganhou 2 Laranjas e 1 Cereja!\n\nValor ganho: R$",valorDeDuasLaranjasEUmaCereja)
+  } senao {
+    escreva("Valor ganho: R$0")
+    inicio()
+  }
+
+  }
+}
