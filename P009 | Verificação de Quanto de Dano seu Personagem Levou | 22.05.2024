@@ -8,22 +8,21 @@ programa {
     //Se a vida ficar de 1 a 20, mostrar "Dano crítico, quase sem vida", se a vida ficar de 21 a 50, mostrar "Dano moderado, vida estável" e se a vida ficar entre 51 a 100, mostrar "Dano leve, vida boa!".
   funcao verificacaoDaDanoLevadoDeSeuPersonagem(){
   real hpDeSeuPersonagem = 100
-  inteiro minimoDeDanoModeradoDeHpDoSeuPersonagem = 1
+  inteiro minimoDeDanoCriticodoDeHpDoSeuPersonagem = 1
   inteiro limiteDeDanoCriticoDeHpDoSeuPersonagem = 20
   inteiro minimoDeDanoModeradoDeHpDoSeuPersonagem = 21
   inteiro limiteDeDanoModeradoDeHpDoSeuPersonagem = 50
   inteiro minimoDeHpEstavelDeSeuPersonagem = 51
   inteiro limiteDeHpEstavelDeSeuPergonagem = 100
-  inteiro hpZeradoDeSeuPersonagem = 0
   real ataqueSofridoAoPersonagem
   real dano
   escreva("\nQual o dano que seu personagem levou neste ataque?\nResposta: ")
   leia(dano)
 
   ataqueSofridoAoPersonagem = hpDeSeuPersonagem - dano 
-  se(ataqueSofridoAoPersonagem == hpZeradoDeSeuPersonagem){
+  se(ataqueSofridoAoPersonagem == limiteDeHpEstavelDeSeuPergonagem){
     escreva("Game Over.\nVida restante: ",ataqueSofridoAoPersonagem)
-  } senao se(ataqueSofridoAoPersonagem > hpZeradoDeSeuPersonagem e ataqueSofridoAoPersonagem < limiteDeDanoModeradoDeHpDoSeuPersonagem){
+  } senao se(ataqueSofridoAoPersonagem > minimoDeDanoCriticodoDeHpDoSeuPersonagem e ataqueSofridoAoPersonagem <= limiteDeDanoCriticoDeHpDoSeuPersonagem){
     escreva("Dano crítico, quase sem vida.\nVidaRestante: ",ataqueSofridoAoPersonagem)
   } senao se(ataqueSofridoAoPersonagem >= minimoDeDanoModeradoDeHpDoSeuPersonagem e ataqueSofridoAoPersonagem <= limiteDeDanoModeradoDeHpDoSeuPersonagem){
     escreva("Dano moderado, vida estável.\nVida restante: ",ataqueSofridoAoPersonagem)
@@ -33,6 +32,10 @@ programa {
     escreva("Opção inválida! Favor digitar um número válido.")
     inicio()
   }
+  
+  }
+}
+
   
   }
 }
