@@ -1,0 +1,28 @@
+programa {
+  funcao inicio() {
+    // 3) Conversor de moedas: Escreva um programa que converta uma quantidade de dólares em reais.
+    // Se o valor do dólar estiver acima de 5 reais, exiba uma mensagem informando que está caro, senão exiba uma mensagem de que está barato.
+
+    real conversaoDeDolaresParaReais
+    real reais
+    real quantoODolarVale
+    real quantidadeDeDolarsASerConvertido
+    real valorDoDolarConsideradoCaro = 5
+
+    escreva("Quanto o dólar está valendo neste momento?\nResposta: $")
+    leia(quantoODolarVale)
+
+    escreva("Digite a quantidade de dólares que você quer que converta para real: $")
+    leia(quantidadeDeDolarsASerConvertido)
+
+    conversaoDeDolaresParaReais = quantidadeDeDolarsASerConvertido * quantoODolarVale
+
+    se(quantoODolarVale > valorDoDolarConsideradoCaro){
+      escreva("Valor do dólar considerado caro.\nQuanto o dólar está valendo: $",quantoODolarVale,"\nValor do dólar desejado convertido a real: R$",conversaoDeDolaresParaReais)
+    } senao se(quantoODolarVale < valorDoDolarConsideradoCaro){
+      escreva("Valor do dólar considerado barato.\nQuanto o dólar está valendo: $",quantoODolarVale,"\nValor do dólar desejado convertido a real: R$",conversaoDeDolaresParaReais)
+    } senao {
+      escreva("Valor do dólar semelhante ao valor do real.\nValor do dólar: $",quantoODolarVale,"\nValor do real: R$",quantoODolarVale)
+    }
+  }
+}
