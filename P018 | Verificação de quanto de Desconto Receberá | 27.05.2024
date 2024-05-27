@@ -1,0 +1,23 @@
+programa {
+  funcao inicio() {
+    // 5) Verificador de idade para desconto no cinema: Escreva um programa que pergunte a idade do usuário e,
+    //  se ele tiver menos de 12 anos, conceda um desconto de 50% no ingresso do cinema; se ele tiver entre 12 e 18 anos,
+    //   conceda um desconto de 25%; caso contrário, não conceda nenhum desconto.
+
+    inteiro idadeDeUsuario 
+    inteiro minimoDeIdadeParaReceberCinquentaPorcentoDeDesconto = 11
+    inteiro minimoDeIdadeParaReceberVinteECincoPorcentoDeDesconto = 12
+    inteiro maximoDeIdadeParaReceberVinteECincoPorcentoDeDesconto = 18
+
+     escreva("Digite sua idade: ")
+     leia(idadeDeUsuario)
+    se(idadeDeUsuario <= minimoDeIdadeParaReceberCinquentaPorcentoDeDesconto){
+      escreva("Quantidade de desconto a receber: 50%")
+    } senao se(idadeDeUsuario >= minimoDeIdadeParaReceberVinteECincoPorcentoDeDesconto e idadeDeUsuario <= maximoDeIdadeParaReceberVinteECincoPorcentoDeDesconto){
+      escreva("Quantidade de desconto a receber: 25%")
+    } senao {
+      escreva("Quantdade de desconto a receber: 0%")
+    }
+
+  }
+}
