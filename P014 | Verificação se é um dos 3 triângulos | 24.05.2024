@@ -19,13 +19,11 @@ leia(ladoC)
 
 se(ladoA == ladoB e ladoA == ladoC){
   escreva("É u triângulo equilátero!\nValores dos lados:\nLado A: ",ladoA,"\nLado B: ",ladoB,"\nLado C: ",ladoC)
-} senao se(ladoA == ladoC e ladoA != ladoB){
-  escreva("É um triângulo isóceles!\nValores dos lados:\nLado A: ",ladoA,"\nLado B: ",ladoB,"\nLado C: ",ladoC)
 } senao se(ladoA < ladoB e ladoB > ladoC){
-  escreva("É um triângulo escaleno!\nValores dos lados:\nLado A: ",ladoA,"\nLado B: ",ladoB,"\nLado C: ",ladoC)
+   escreva("É u triângulo escaleno!\nValores dos lados:\nLado A: ",ladoA,"\nLado B: ",ladoB,"\nLado C: ",ladoC)
 } senao {
-  escreva("\nNão é nenhuma das 3 opções! Entre equilatero, isóceles e escaleno.")
-  comparacaoDosLadosDoTriangulo()
+  escreva("É um triângulo isóceles!\nValores dos lados:\nLado A: ",ladoA,"\nLado B: ",ladoB,"\nLado C: ",ladoC)
+
 }
   }
 }
