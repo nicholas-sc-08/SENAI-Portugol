@@ -1,0 +1,33 @@
+programa {
+  funcao inicio() {
+    // 3) Desenvolver um programa no qual o usuário digite o número de multas que deseja cadastrar e para
+    // cada multa deve colocar o valor em reais e os pontos perdidos na carteira de habilitação.
+    // Ao final, mostrar o somatório das multas e dos pontos, caso os pontos alcancem 21 ou mais,
+    // exibir a mensagem “Você está irregular”, senão, exibir “Você está regular”.
+  
+  inteiro numeroDeMultasDigitado
+  inteiro pontosNaCarteira = 0
+  inteiro quantidadeDePontosPerdidos
+  inteiro somatorioDeMultasEPontos
+  inteiro quantidadeDePontosParaSerConsideradoIrregular = 21
+  real valorDasMultasEmReais
+  enquanto(pontosNaCarteira < quantidadeDePontosParaSerConsideradoIrregular){
+
+  escreva("\nQual o número de multas que deseja cadastrar na carteira do motorista?\nResposta: ")
+  leia(numeroDeMultasDigitado)
+
+  escreva("\nQuantos pontos o usuário irá receber com essas multas?")
+  leia(quantidadeDePontosPerdidos)
+  escreva("Qual o valor total da multa(s)?\nResposta: ")
+  leia(valorDasMultasEmReais)
+  pontosNaCarteira = quantidadeDePontosPerdidos + numeroDeMultasDigitado
+
+  escreva("\nVocê está regular.")
+  escreva("\nValor da multa(s): R$",valorDasMultasEmReais)
+  }
+
+  escreva("Você está irregular")
+  escreva("\nValor da multa(s): R$",valorDasMultasEmReais) 
+  
+  }
+}
